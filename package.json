@@ -1,0 +1,19 @@
+{
+  "name": "vue-contact-form-exercise",
+  "version": "1.0.0",
+  "description": "A Vue exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessachalla/vue-contact-form-exercise.git"
+  },
+  "author": "Jessa Challa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jessachalla/vue-contact-form-exercise/issues"
+  },
+  "homepage": "https://github.com/jessachalla/vue-contact-form-exercise#readme"
+}
