@@ -7,37 +7,38 @@
 <body>
 
     <!-- Let's add Vue here -->
-    <div id="app">
+    <div id="app" style="padding: 60px;">
 
         <h1>Contact Form</h1>
 
-        <p style="color: red;">{{ error }}</p>
-
         <form method="post" action="#">
             <div>
-                <label for="name">Name</label>
+                <label for="name" style="margin-right: 40px;">Name</label>
                 <input name="name" id="name" v-model="form.name" />
-                <p style="color: red;">{{ nameValidation }}</p>
+                <p style="color: red; margin-left: 110px; margin-top: 1px;">{{ nameValidation }}</p>
             </div>
             <div>
-                <label for="email">Email</label>
+                <label for="email" style="margin-right: 40px;">Email</label>
                 <input name="email" id="email" v-model="form.email" />
-                <p style="color: red;">{{ emailValidation }}</p>
+                <p style="color: red; margin-left: 110px; margin-top: 1px;">{{ emailValidation }}</p>
             </div>
             <div>
-                <label for="message">Message</label>
+                <label for="message" style="margin-right: 22px;">Message</label>
                 <textarea name="message" id="message" v-model="form.message"></textarea>
-                <p style="color: red;">{{ messageValidation }}</p>
+                <p style="color: red; margin-left: 110px; margin-top: 1px;">{{ messageValidation }}</p>
             </div>
 
             <button @click.prevent="validateForm">Send Form</button>
         </form>
 
-        <h2>Form Details</h2>
+        <div style="border: 2px solid gray; padding: 5px 20px; margin-top: 40px;">
+            <h2>Form Details</h2>
 
-        <p><strong>Name</strong> {{ form.name }}</p>
-        <p><strong>Email</strong> {{ form.email }}</p>
-        <p><strong>Message</strong> {{ form.message }}</p>
+            <p><strong>Name</strong> {{ form.name }}</p>
+            <p><strong>Email</strong> {{ form.email }}</p>
+            <p><strong>Message</strong> {{ form.message }}</p>
+            <h2 style="color: red;">{{ error }}</h2>
+        </div>
 
     </div>
 
@@ -64,17 +65,17 @@
             computed: {
                 nameValidation: function () {
                     if (!this.form.name.length && this.error) {
-                        return 'Name field is required';
+                        return '*Name field is required';
                     }
                 },
                 emailValidation: function () {
                     if (!this.form.email.length && this.error) {
-                        return 'Email field is required';
+                        return '*Email field is required';
                     }
                 },
                 messageValidation: function () {
                     if (!this.form.message.length && this.error) {
-                        return 'Message field is required';
+                        return '*Message field is required';
                     }
                 }
             }
